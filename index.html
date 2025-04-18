@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS Login Demo - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-brand">Login Demo</div>
+    <ul class="nav-links">
+        <li id="nav-home"><a href="#" onclick="showSection('home')">Home</a></li>
+        <li id="nav-login"><a href="#" onclick="showSection('login')">Login</a></li>
+        <li id="nav-register"><a href="#" onclick="showSection('register')">Register</a></li>
+        <li id="nav-projects"><a href="#" onclick="showSection('projects')">Projects</a></li>
+      </ul>
+      
+      
+  </nav>
+ 
+  
+  <!-- Home Section -->
+  <div class="container" id="home-section">
+    <h1>Welcome to Our Demo System</h1>
+    <p>This system demonstrates a simple login and registration process using JavaScript and localStorage. The goal is to show how a temporary login session (lasting 1 hour) works, allowing you to see the system's functionality without a backend.</p>
+    <p>Please use the navigation bar above to login or register.</p>
+  </div>
+  
+  <!-- Login Section -->
+  <div class="container" id="login-section" style="display: none;">
+    <h1>Login</h1>
+    <input type="text" id="login-username" placeholder="Enter your name" required />
+    <button onclick="login()">Login</button>
+  </div>
+  
+  <!-- Register Section -->
+  <div class="container" id="register-section" style="display: none;">
+    <h1>Register</h1>
+    <input type="text" id="register-username" placeholder="Enter your name" required />
+    <button onclick="register()">Register</button>
+  </div>
+  
+  <!-- Dashboard Section -->
+  <!-- Dashboard Section -->
+<div class="container" id="dashboard-section" style="display: none;">
+    <div class="dashboard-header">
+      <h1>Dashboard</h1>
+      <div class="avatar-container">
+        <div id="avatar" onclick="toggleDropdown()"></div>
+        <div id="avatar-dropdown" class="dropdown" style="display: none;">
+          <ul>
+            <li onclick="logout()">Logout</li>
+            <li onclick="deleteAccount()">Delete Account</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p>Welcome, <span id="user-name"></span>!</p>
+  </div>
+  
+  
+  <!-- Projects Section -->
+<div class="container" id="projects-section" style="display: none;">
+    <h1>My Projects</h1>
+  
+    <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Project Screenshot" />
+        <h3>Portfolio Website</h3>
+      <p>My personal portfolio showing off my work, skills, and contact details.</p>
+      <a href="https://sandilegontsana.github.io/portfolio/" target="_blank">Visit</a>
+    </div>
+  
+    <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Project Screenshot" />
+        <h3>PHP Login System</h3>
+      <p>A PHP-based user login, register, and logout system with session management.</p>
+      <a href="https://github.com/SandileGontsana/php-login-system" target="_blank">View on GitHub</a>
+    </div>
+  
+    <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Project Screenshot" />
+        <h3>JS Quiz App</h3>
+      <p>Fun and interactive quiz game built with vanilla JavaScript and localStorage.</p>
+      <a href="https://github.com/SandileGontsana/js-quiz-app" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  <script>
+  
+
+  </script>
+</body>
+</html>
